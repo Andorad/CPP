@@ -1,4 +1,8 @@
-﻿  Player_Control.cpp
-  test sfml.vcxproj -> C:\Projet perso\C++ 2D\test sfml\x64\Debug\test sfml.exe
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: Le répertoire intermédiaire (x64\Debug\) contient des fichiers partagés provenant d'un autre projet (test sfml.vcxproj). Cela peut entraîner un comportement de nettoyage et de regénération incorrect.
+  Player_Control.cpp
+  Projet_C++_2D.cpp
+C:\Projet perso\C++ 2D\Projet_C++_2D\CPP\test sfml\test sfml\Projet_C++_2D.cpp(16,19): warning C4101: 'ptrPlayer' : variable locale non référencée
+  Génération de code en cours...
+  test sfml.vcxproj -> C:\Projet perso\C++ 2D\Projet_C++_2D\CPP\test sfml\x64\Debug\Projet_C++_2D.exe
   'pwsh.exe' n'est pas reconnu en tant que commande interne
   ou externe, un programme exécutable ou un fichier de commandes.

@@ -1,16 +1,13 @@
 #include "Player_Control.h"
 
 #include <iostream>
-#include <SFML/Graphics.hpp>
 
-Player_Control::Player_Control(sf::CircleShape* Player, sf::RenderWindow* Window)
+Player_Control::Player_Control(sf::CircleShape *Player)
 {
-	Game_Window = Window;
-	Game_Player = *Player;
+	ptrGame_Player = Player;
 };
 
 Player_Control::~Player_Control() = default;
-
 
 void Player_Control::deplacement(sf::Event Game_event)
 {
@@ -55,23 +52,27 @@ void Player_Control::deplacement(sf::Event Game_event)
 
 		if (keypressedZ)
 		{
-			ypos -= 0.1f;
-			Game_Player.setPosition(xpos, ypos);
+			ypos -= 0.5f;
+			ptrGame_Player->setPosition(xpos, ypos);
+			std::cout << "up!" << std::endl;
 		}
 		if (keypressedS)
 		{
-			ypos += 0.1f;
-			Game_Player.setPosition(xpos, ypos);
+			ypos += 0.5f;
+			ptrGame_Player->setPosition(xpos, ypos);
+			std::cout << "down!" << std::endl;
 		}
 		if (keypressedQ)
 		{
-			xpos -= 0.1f;
-			Game_Player.setPosition(xpos, ypos);
+			xpos -= 0.5f;
+			ptrGame_Player->setPosition(xpos, ypos);
+			std::cout << "left!" << std::endl;
 		}
 		if (keypressedD)
 		{
-			xpos += 0.1f;
-			Game_Player.setPosition(xpos, ypos);
+			xpos += 0.5f;
+			ptrGame_Player->setPosition(xpos, ypos);
+			std::cout << "right!" << std::endl;
 		}
 		};
 
