@@ -36,7 +36,7 @@ int main()
 			{
 				window.close();
 			}
-			playerControl.deplacement(sf::Event);
+			playerControl.deplacement(event);
 			/*if (event.type == sf::Event::KeyPressed)
 			{
 				if (event.key.code == sf::Keyboard::Z)

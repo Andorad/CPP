@@ -12,7 +12,7 @@ private:
 	bool keypressedQ = false;
 	bool keypressedS = false;
 	bool firing = false;
-	sf::CircleShape Game_Player;
+	sf::CircleShape *Game_Player;
 	sf::RenderWindow Game_Window;
 
 public:

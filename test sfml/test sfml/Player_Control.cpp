@@ -5,8 +5,7 @@
 
 Player_Control::Player_Control(sf::CircleShape* Player, sf::RenderWindow* Window)
 {
-	Game_Window = Window;
-	Game_Player = *Player;
+	Game_Player = Player;
 };
 
 Player_Control::~Player_Control() = default;
@@ -55,23 +54,23 @@ void Player_Control::deplacement(sf::Event Game_event)
 
 		if (keypressedZ)
 		{
-			ypos -= 0.1f;
-			Game_Player.setPosition(xpos, ypos);
+			ypos -= 1.5f;
+			Game_Player->setPosition(xpos, ypos);
 		}
 		if (keypressedS)
 		{
-			ypos += 0.1f;
-			Game_Player.setPosition(xpos, ypos);
+			ypos += 1.5f;
+			Game_Player->setPosition(xpos, ypos);
 		}
 		if (keypressedQ)
 		{
-			xpos -= 0.1f;
-			Game_Player.setPosition(xpos, ypos);
+			xpos -= 1.5f;
+			Game_Player->setPosition(xpos, ypos);
 		}
 		if (keypressedD)
 		{
-			xpos += 0.1f;
-			Game_Player.setPosition(xpos, ypos);
+			xpos += 1.5f;
+			Game_Player->setPosition(xpos, ypos);
 		}
 		};
 
