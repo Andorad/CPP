@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/libpng-x64-windows-1.6.40#1-aadedf96-a143-45c0-97bb-e6f063469893",
+  "documentNamespace": "https://spdx.org/spdxdocs/libpng-x64-windows-1.6.40#1-c0b5c27f-0640-408c-9a63-246846b77fb9",
   "name": "libpng:x64-windows@1.6.40#1 1e3625db62815ebc1d3dba092ba43d3925950bbeae2bcd3b199b0a876d022991",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-1c9ec1978a6b0c2b39c9e9554a96e3e275f7556e"
     ],
-    "created": "2024-01-08T08:29:03Z"
+    "created": "2024-01-08T11:38:43Z"
   },
   "relationships": [
     {
@@ -168,7 +168,7 @@
   ],
   "files": [
     {
-      "fileName": "./C:/vcpkg/ports/libpng/cmake.patch",
+      "fileName": "./D:/vcpkg/ports/libpng/cmake.patch",
       "SPDXID": "SPDXRef-file-0",
       "checksums": [
         {
@@ -180,7 +180,7 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./C:/vcpkg/ports/libpng/fix-export-targets.patch",
+      "fileName": "./D:/vcpkg/ports/libpng/fix-export-targets.patch",
       "SPDXID": "SPDXRef-file-1",
       "checksums": [
         {
@@ -192,7 +192,7 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./C:/vcpkg/ports/libpng/fix-msa-support-for-mips.patch",
+      "fileName": "./D:/vcpkg/ports/libpng/fix-msa-support-for-mips.patch",
       "SPDXID": "SPDXRef-file-2",
       "checksums": [
         {
@@ -204,7 +204,7 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./C:/vcpkg/ports/libpng/libm.patch",
+      "fileName": "./D:/vcpkg/ports/libpng/libm.patch",
       "SPDXID": "SPDXRef-file-3",
       "checksums": [
         {
@@ -216,7 +216,7 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./C:/vcpkg/ports/libpng/pkgconfig.patch",
+      "fileName": "./D:/vcpkg/ports/libpng/pkgconfig.patch",
       "SPDXID": "SPDXRef-file-4",
       "checksums": [
         {
@@ -228,7 +228,7 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./C:/vcpkg/ports/libpng/portfile.cmake",
+      "fileName": "./D:/vcpkg/ports/libpng/portfile.cmake",
       "SPDXID": "SPDXRef-file-5",
       "checksums": [
         {
@@ -240,7 +240,7 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./C:/vcpkg/ports/libpng/usage",
+      "fileName": "./D:/vcpkg/ports/libpng/usage",
       "SPDXID": "SPDXRef-file-6",
       "checksums": [
         {
@@ -252,7 +252,7 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./C:/vcpkg/ports/libpng/vcpkg-cmake-wrapper.cmake",
+      "fileName": "./D:/vcpkg/ports/libpng/vcpkg-cmake-wrapper.cmake",
       "SPDXID": "SPDXRef-file-7",
       "checksums": [
         {
@@ -264,7 +264,7 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./C:/vcpkg/ports/libpng/vcpkg.json",
+      "fileName": "./D:/vcpkg/ports/libpng/vcpkg.json",
       "SPDXID": "SPDXRef-file-8",
       "checksums": [
         {

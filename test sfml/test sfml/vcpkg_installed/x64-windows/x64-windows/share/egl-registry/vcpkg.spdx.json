@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/egl-registry-x64-windows-2022-09-20-f225d6f0-bd4b-4daf-bdd0-146303dd6f71",
+  "documentNamespace": "https://spdx.org/spdxdocs/egl-registry-x64-windows-2022-09-20-af87c5a6-0064-4346-b5fa-a050014b1089",
   "name": "egl-registry:x64-windows@2022-09-20 e987935eb7f13b8b7d296b6895a2822186ce4fca27ec1b762c1e143b295cff54",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-1c9ec1978a6b0c2b39c9e9554a96e3e275f7556e"
     ],
-    "created": "2024-01-08T08:27:31Z"
+    "created": "2024-01-08T11:31:58Z"
   },
   "relationships": [
     {
@@ -83,7 +83,7 @@
   ],
   "files": [
     {
-      "fileName": "./C:/vcpkg/ports/egl-registry/portfile.cmake",
+      "fileName": "./D:/vcpkg/ports/egl-registry/portfile.cmake",
       "SPDXID": "SPDXRef-file-0",
       "checksums": [
         {
@@ -95,7 +95,7 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./C:/vcpkg/ports/egl-registry/vcpkg.json",
+      "fileName": "./D:/vcpkg/ports/egl-registry/vcpkg.json",
       "SPDXID": "SPDXRef-file-1",
       "checksums": [
         {

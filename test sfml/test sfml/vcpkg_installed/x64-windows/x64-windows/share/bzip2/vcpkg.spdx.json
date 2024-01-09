@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/bzip2-x64-windows-1.0.8#5-a5f69315-03f6-44fb-8583-ae5566245329",
+  "documentNamespace": "https://spdx.org/spdxdocs/bzip2-x64-windows-1.0.8#5-c2692195-1120-425f-a43b-cde198d6ede0",
   "name": "bzip2:x64-windows@1.0.8#5 87d93595d66f0b04c6a008a60d48a1dd4da332c178950a1089c8c9bb70df7897",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-1c9ec1978a6b0c2b39c9e9554a96e3e275f7556e"
     ],
-    "created": "2024-01-08T08:29:08Z"
+    "created": "2024-01-08T11:39:05Z"
   },
   "relationships": [
     {
@@ -124,7 +124,7 @@
   ],
   "files": [
     {
-      "fileName": "./C:/vcpkg/ports/bzip2/bzip2.pc.in",
+      "fileName": "./D:/vcpkg/ports/bzip2/bzip2.pc.in",
       "SPDXID": "SPDXRef-file-0",
       "checksums": [
         {
@@ -136,7 +136,7 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./C:/vcpkg/ports/bzip2/CMakeLists.txt",
+      "fileName": "./D:/vcpkg/ports/bzip2/CMakeLists.txt",
       "SPDXID": "SPDXRef-file-1",
       "checksums": [
         {
@@ -148,7 +148,7 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./C:/vcpkg/ports/bzip2/fix-import-export-macros.patch",
+      "fileName": "./D:/vcpkg/ports/bzip2/fix-import-export-macros.patch",
       "SPDXID": "SPDXRef-file-2",
       "checksums": [
         {
@@ -160,7 +160,7 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./C:/vcpkg/ports/bzip2/portfile.cmake",
+      "fileName": "./D:/vcpkg/ports/bzip2/portfile.cmake",
       "SPDXID": "SPDXRef-file-3",
       "checksums": [
         {
@@ -172,7 +172,7 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./C:/vcpkg/ports/bzip2/usage",
+      "fileName": "./D:/vcpkg/ports/bzip2/usage",
       "SPDXID": "SPDXRef-file-4",
       "checksums": [
         {
@@ -184,7 +184,7 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./C:/vcpkg/ports/bzip2/vcpkg.json",
+      "fileName": "./D:/vcpkg/ports/bzip2/vcpkg.json",
       "SPDXID": "SPDXRef-file-5",
       "checksums": [
         {

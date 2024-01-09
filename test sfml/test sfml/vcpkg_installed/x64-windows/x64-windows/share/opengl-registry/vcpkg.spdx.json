@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/opengl-registry-x64-windows-2022-09-29#1-cc87a593-6e71-432c-a690-e3ed63748eca",
+  "documentNamespace": "https://spdx.org/spdxdocs/opengl-registry-x64-windows-2022-09-29#1-3e997a72-a4dc-4ff0-8a8e-7d42dc7a6960",
   "name": "opengl-registry:x64-windows@2022-09-29#1 569d7f0f55e5ff446670be26795b6aaca6b3d913f4214127c483d18ff12a1f84",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-1c9ec1978a6b0c2b39c9e9554a96e3e275f7556e"
     ],
-    "created": "2024-01-08T08:27:53Z"
+    "created": "2024-01-08T11:32:24Z"
   },
   "relationships": [
     {
@@ -83,7 +83,7 @@
   ],
   "files": [
     {
-      "fileName": "./C:/vcpkg/ports/opengl-registry/portfile.cmake",
+      "fileName": "./D:/vcpkg/ports/opengl-registry/portfile.cmake",
       "SPDXID": "SPDXRef-file-0",
       "checksums": [
         {
@@ -95,7 +95,7 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./C:/vcpkg/ports/opengl-registry/vcpkg.json",
+      "fileName": "./D:/vcpkg/ports/opengl-registry/vcpkg.json",
       "SPDXID": "SPDXRef-file-1",
       "checksums": [
         {

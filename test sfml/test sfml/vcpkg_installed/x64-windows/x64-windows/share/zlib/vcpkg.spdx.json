@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/zlib-x64-windows-1.3-7a292ebe-ee3d-4aa7-be78-4710541e714b",
+  "documentNamespace": "https://spdx.org/spdxdocs/zlib-x64-windows-1.3-ce0eb4c9-d872-4203-a82b-7c41e18dd391",
   "name": "zlib:x64-windows@1.3 b48334f63f28cdd5893afc5dc03d029686d1c05c7edd538fce88d2dfc36727d2",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-1c9ec1978a6b0c2b39c9e9554a96e3e275f7556e"
     ],
-    "created": "2024-01-08T08:28:58Z"
+    "created": "2024-01-08T11:38:16Z"
   },
   "relationships": [
     {
@@ -143,7 +143,7 @@
   ],
   "files": [
     {
-      "fileName": "./C:/vcpkg/ports/zlib/0001-Prevent-invalid-inclusions-when-HAVE_-is-set-to-0.patch",
+      "fileName": "./D:/vcpkg/ports/zlib/0001-Prevent-invalid-inclusions-when-HAVE_-is-set-to-0.patch",
       "SPDXID": "SPDXRef-file-0",
       "checksums": [
         {
@@ -155,7 +155,7 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./C:/vcpkg/ports/zlib/0002-skip-building-examples.patch",
+      "fileName": "./D:/vcpkg/ports/zlib/0002-skip-building-examples.patch",
       "SPDXID": "SPDXRef-file-1",
       "checksums": [
         {
@@ -167,7 +167,7 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./C:/vcpkg/ports/zlib/0003-build-static-or-shared-not-both.patch",
+      "fileName": "./D:/vcpkg/ports/zlib/0003-build-static-or-shared-not-both.patch",
       "SPDXID": "SPDXRef-file-2",
       "checksums": [
         {
@@ -179,7 +179,7 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./C:/vcpkg/ports/zlib/0004-android-and-mingw-fixes.patch",
+      "fileName": "./D:/vcpkg/ports/zlib/0004-android-and-mingw-fixes.patch",
       "SPDXID": "SPDXRef-file-3",
       "checksums": [
         {
@@ -191,7 +191,7 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./C:/vcpkg/ports/zlib/portfile.cmake",
+      "fileName": "./D:/vcpkg/ports/zlib/portfile.cmake",
       "SPDXID": "SPDXRef-file-4",
       "checksums": [
         {
@@ -203,7 +203,7 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./C:/vcpkg/ports/zlib/usage",
+      "fileName": "./D:/vcpkg/ports/zlib/usage",
       "SPDXID": "SPDXRef-file-5",
       "checksums": [
         {
@@ -215,7 +215,7 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./C:/vcpkg/ports/zlib/vcpkg-cmake-wrapper.cmake",
+      "fileName": "./D:/vcpkg/ports/zlib/vcpkg-cmake-wrapper.cmake",
       "SPDXID": "SPDXRef-file-6",
       "checksums": [
         {
@@ -227,7 +227,7 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./C:/vcpkg/ports/zlib/vcpkg.json",
+      "fileName": "./D:/vcpkg/ports/zlib/vcpkg.json",
       "SPDXID": "SPDXRef-file-7",
       "checksums": [
         {
