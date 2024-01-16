@@ -19,7 +19,6 @@ UI::UI(sf::RenderWindow &_window)
     ammoText.setCharacterSize(70);
     ammoText.setPosition(_window.getSize().x - 60, _window.getSize().y - 70);
 }
-UI::~UI() = default;
 
 
 int UI::ModifyScoreValue(int _score, int modif)
