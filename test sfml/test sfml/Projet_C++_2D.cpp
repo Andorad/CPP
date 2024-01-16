@@ -1,10 +1,11 @@
-#include <SFML/Audio.hpp>
-#include <SFML/Graphics.hpp>
-#include <iostream>
-#include "Player_Control.h"
+#include "Game_controller.h"
 
 int main()
 {
+	Game_controller game;
+	game.Game();
+
+	/*
 	float xpos = 50.f;
 	float ypos = 150.f;
 	bool firing = false;
@@ -34,13 +35,14 @@ int main()
 			playerControl.deplacement(event);
 			playerControl.fire(event);
 		}
-
+		playerControl.deplacement(event);
+		playerControl.fire(event);
 		window.clear();
 
 		window.draw(Player);
 
 		window.display();
-	}
+	}*/
 
 	return 0;
 }

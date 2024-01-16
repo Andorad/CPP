@@ -13,11 +13,11 @@ private:
 	bool keypressedS = false;
 	bool firing = false;
 	sf::CircleShape * ptrGame_Player;
-	sf::RenderWindow Game_Window;
+	sf::RenderWindow* ptrWindow;
 
 public:
-	Player_Control(sf::CircleShape *Player);
+	Player_Control(sf::CircleShape *Player, sf::RenderWindow* Window);
 	~Player_Control();
 	void deplacement(sf::Event Game_event);
-	void fire(sf::Event Game_event);
+	bool fire(sf::Event Game_event);
 };
