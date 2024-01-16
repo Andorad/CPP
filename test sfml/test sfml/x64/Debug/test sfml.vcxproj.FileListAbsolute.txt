@@ -1,2 +1,0 @@
-C:\Projet perso\C++ 2D\test sfml\test sfml\x64\Debug\test sfml.vcxproj.CopyComplete
-C:\Projet perso\C++ 2D\Projet_C++_2D\CPP\test sfml\test sfml\x64\Debug\test sfml.vcxproj.CopyComplete
