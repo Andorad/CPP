@@ -7,8 +7,10 @@
 class Game_controller
 {
 private:
-	float xpos = 50.f;
-	float ypos = 150.f;
+	float xpos = 512.f;
+	float ypos = 400.f;
+	int screenWidth = 1024;
+	int screenHeight = 800;
 	bool firing = false;
 	float fireRate = 0;
 

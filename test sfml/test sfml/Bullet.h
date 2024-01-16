@@ -13,4 +13,5 @@ public:
 	sf::CircleShape getBulletObject() { return BulletObject; }
 
 	void Bullet_fired();
+
 };
