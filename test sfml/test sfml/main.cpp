@@ -1,6 +1,5 @@
 #include <SFML/Graphics.hpp>
 #include "UI.h"
-#include "toto.cpp"
 
 int score = 0;
 int maxAmmoInLoader = 10;
