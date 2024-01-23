@@ -1,10 +1,13 @@
 #pragma once
 #include "Character.h"
-#include "Player_Control.h"
+#include <SFML/Graphics.hpp>
+#include <cmath>
 
 class BasicEnemy : public Character
 {
 	public:
-		void Attack() override;
+		BasicEnemy();
+		~BasicEnemy() = default;
+		//void Attack() override;
 		void Move() override;
 };

@@ -2,14 +2,19 @@
 
 Character::Character()
 {
-    health = 10;
+    shape.setPosition(0, 0);
 };
-Character::~Character() = default;
 
-void Character::Die()
+void Character::Draw(sf::RenderWindow& window) 
 {
-    if (health <= 0)
-    {
-        //delete CetObject;
-    }
+    shape.setRadius(radius);
+    shape.setFillColor(color);
+    shape.setOutlineColor(sf::Color::Red);
+    window.draw(shape);
+}
+
+void Character::TakeDamage() 
+{ 
+    SetHealth(GetHealth() - 1);
+    shape.setOutlineThickness((GetMaxHealth() - GetHealth()) * -50 / GetMaxHealth());
 }

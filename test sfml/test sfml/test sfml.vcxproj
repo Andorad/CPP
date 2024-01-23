@@ -133,13 +133,11 @@
   <ItemGroup>
     <ClCompile Include="BasicEnemy.cpp" />
     <ClCompile Include="Character.cpp" />
-    <ClCompile Include="Player_Control.cpp" />
-    <ClCompile Include="Projet_C++_2D.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BasicEnemy.h" />
     <ClInclude Include="Character.h" />
-    <ClInclude Include="Player_Control.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
