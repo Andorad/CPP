@@ -131,15 +131,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Pistol.cpp" />
     <ClCompile Include="Player_Control.cpp" />
     <ClCompile Include="Projet_C++_2D.cpp" />
     <ClCompile Include="Game_controller.cpp" />
     <ClCompile Include="Bullet.cpp" />
+    <ClCompile Include="Weapon.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game_controller.h" />
     <ClInclude Include="Bullet.h" />
+    <ClInclude Include="Pistol.h" />
     <ClInclude Include="Player_Control.h" />
+    <ClInclude Include="Weapon.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
