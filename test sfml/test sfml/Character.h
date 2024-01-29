@@ -20,7 +20,8 @@ class Character
 		Character();
 		~Character() = default;
 		//virtual void Attack() = 0;
-		virtual void Move() = 0;
+		virtual void Move(int targetPosX, int targetPosY) = 0;
+		virtual void Spawn(int sizeX, int sizeY) = 0;
 		void Draw(sf::RenderWindow& window);
 		void TakeDamage();
 		const sf::Vector2f& GetPosition() { return shape.getPosition(); }
@@ -30,9 +31,9 @@ class Character
 		const bool& GetCanAttack() { return canAttack; }
 		const float& GetAttackRange() { return attackRange; }
 		const float& GetAttackSpeed() { return attackSpeed; }
+		const float& GetRadius() { return radius; }
 		void SetPosition(sf::Vector2f _pos) { shape.setPosition(_pos); }
 		void SetHealth(int _health) { health = _health; }
 		void SetCanAttack(bool _canAttack) { canAttack = _canAttack; }
 		void SetSpeed(float _speed) { speed = _speed; }
-
 };

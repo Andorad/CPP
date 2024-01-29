@@ -1,11 +1,17 @@
 #include <SFML/Graphics.hpp>
 #include "BasicEnemy.h"
 #include <iostream>
+#include <cstdlib>
 
 int main()
 {
     sf::RenderWindow window(sf::VideoMode(800, 600), "Exemple de texte");
     std::vector<Character*> enemyList;
+    int targetX = 100;
+    int targetY = 100;
+
+    srand(time(nullptr));
+
 
     while (window.isOpen())
     {
@@ -35,6 +41,12 @@ int main()
                 else if(event.key.code == sf::Keyboard::Z)
                 {
                     enemyList.push_back(new BasicEnemy);
+                    enemyList[enemyList.size() - 1]->Spawn(window.getSize().x, window.getSize().y);
+                }
+                else if (event.key.code == sf::Keyboard::E)
+                {
+                    targetX = rand() % window.getSize().x;
+                    targetY = rand() % window.getSize().y;
                 }
             }
         }
@@ -44,7 +56,7 @@ int main()
         {
             for (size_t i = 0; i < enemyList.size(); i++)
             {
-                enemyList[i]->Move();
+                enemyList[i]->Move(targetX, targetY);
                 enemyList[i]->Draw(window);
             }
         }

@@ -2,7 +2,7 @@
 
 Character::Character()
 {
-    shape.setPosition(0, 0);
+    
 };
 
 void Character::Draw(sf::RenderWindow& window) 
