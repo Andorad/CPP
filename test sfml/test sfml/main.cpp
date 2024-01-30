@@ -1,5 +1,6 @@
 #include <SFML/Graphics.hpp>
 #include "BasicEnemy.h"
+#include "WaveManager.h"
 #include <iostream>
 #include <cstdlib>
 
@@ -7,14 +8,21 @@ int main()
 {
     sf::RenderWindow window(sf::VideoMode(800, 600), "Exemple de texte");
     std::vector<Character*> enemyList;
+    WaveManager waveManager;
     int targetX = 100;
-    int targetY = 100;
+    int targetY = 100;// A remplacer par la position du joueur
+    int enemiesToSpawn = 1;
 
     srand(time(nullptr));
 
-
     while (window.isOpen())
     {
+        //Si tous les ennemis sont morts on lance la nouvelle vague
+        if(enemyList.size() == 0)
+        {
+            waveManager.InstantiateWaves(enemyList, window.getSize().x, window.getSize().y, enemiesToSpawn);
+            enemiesToSpawn *= 2;
+        }
 
         sf::Event event;
         while (window.pollEvent(event))
@@ -52,6 +60,7 @@ int main()
         }
 
         window.clear();
+        //Si on a des ennemis dans la scène, on les déplace et on les redessine à leur nouvelle position
         if(!enemyList.empty())
         {
             for (size_t i = 0; i < enemyList.size(); i++)
