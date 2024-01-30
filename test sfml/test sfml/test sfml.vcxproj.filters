@@ -16,6 +16,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="UI.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
     <ClCompile Include="BasicEnemy.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
@@ -40,6 +42,8 @@
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="Player_Control.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
     <ClInclude Include="BasicEnemy.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>

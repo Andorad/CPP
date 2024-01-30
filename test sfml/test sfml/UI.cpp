@@ -8,6 +8,7 @@ UI::UI(sf::RenderWindow &_window)
     }
     targetTexture.setSmooth(true);
 
+    //On cache le curseur de la souris et on le remplace par un sprite
     onMouseSprite.setTexture(targetTexture);
     onMouseSprite.setScale(sf::Vector2f(0.1f, 0.1f));
     _window.setMouseCursorVisible(false);
@@ -19,6 +20,7 @@ UI::UI(sf::RenderWindow &_window)
     {
         // Gérer l'erreur si la police n'a pas pu être chargée
     }
+    //On initialise nos textes
     scoreText.setFont(font);
     scoreText.setCharacterSize(70);
     scoreText.setPosition(0, 0);
@@ -31,16 +33,24 @@ UI::UI(sf::RenderWindow &_window)
 
 void UI::ModifyScoreValue(int _score)
 {
+    //On modifie la string du score à afficher en fonction du score
     scoreText.setString("Score : " + std::to_string(_score));
 }
 
 void UI::UpdateUI(sf::RenderWindow& window)
 {
+    //On update le UI
     sf::Vector2i mousePosition = sf::Mouse::getPosition(window);
     sf::Vector2f mousePositionWorld = window.mapPixelToCoords(mousePosition);
     onMouseSprite.setOrigin(sf::Vector2f(onMouseSprite.getLocalBounds().width / 2, onMouseSprite.getLocalBounds().height / 2));
     onMouseSprite.setPosition(mousePositionWorld);
 
+    Draw(window);
+}
+
+void UI::Draw(sf::RenderWindow& window)
+{
+    //On draw le UI
     window.draw(scoreText);
     window.draw(ammoText);
     window.draw(onMouseSprite);
@@ -48,5 +58,6 @@ void UI::UpdateUI(sf::RenderWindow& window)
 
 void UI::ModifyAmmoValue(int ammo)
 {
+    //On modifie la string des balles à afficher en fonction du score
     ammoText.setString(std::to_string(ammo));
 }

@@ -11,6 +11,7 @@ public:
 	void ModifyAmmoValue(int ammo);
 	void ModifyScoreValue(int score);
 	void UpdateUI(sf::RenderWindow& window);
+	void Draw(sf::RenderWindow& window);
 private:
 	sf::Texture targetTexture;
 	sf::Sprite onMouseSprite;

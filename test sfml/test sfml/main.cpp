@@ -79,6 +79,7 @@ int main()
                         if (enemyList[0]->GetHealth() <= 0)
                         {
                             delete(enemyList[0]);
+                            AddScore(ui);
                             enemyList[0] = nullptr;
                             enemyList.erase(enemyList.begin());
                         }
@@ -114,7 +115,6 @@ int main()
         }
 
         window.clear();
-        ui.UpdateUI(window);
         //Si on a des ennemis dans la sc�ne, on les d�place et on les redessine � leur nouvelle position
         if(!enemyList.empty())
         {
@@ -124,6 +124,7 @@ int main()
                 enemyList[i]->Draw(window);
             }
         }
+        ui.UpdateUI(window);
         window.display();
     }
 
