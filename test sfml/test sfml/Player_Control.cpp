@@ -2,104 +2,127 @@
 
 #include <iostream>
 
-Player_Control::Player_Control(sf::CircleShape *Player)
+#include "Pistol.h"
+
+Player_Control::Player_Control(sf::CircleShape *Player, sf::RenderWindow *Window)
 {
 	ptrGame_Player = Player;
+	xpos = ptrGame_Player->getPosition().x;
+	ypos = ptrGame_Player->getPosition().y;
+	ptrWindow = Window;
 };
 
 Player_Control::~Player_Control() = default;
 
-void Player_Control::deplacement(sf::Event Game_event)
+void Player_Control::isDeplacement(sf::Event Game_event)
 {
-	if (Game_event.type == sf::Event::KeyPressed)
+		if (Game_event.type == sf::Event::KeyPressed)
+		{
+			if (Game_event.key.code == sf::Keyboard::Z)
+			{
+				keypressedZ = true;
+			}
+			else if (Game_event.key.code == sf::Keyboard::S)
+			{
+				keypressedS = true;
+			}
+			if (Game_event.key.code == sf::Keyboard::D)
+			{
+				keypressedD = true;
+			}
+			else if (Game_event.key.code == sf::Keyboard::Q)
+			{
+				keypressedQ = true;
+			}
+		}
+		else if (Game_event.type == sf::Event::KeyReleased)
+		{
+			if (Game_event.key.code == sf::Keyboard::Z)
+			{
+				keypressedZ = false;
+			}
+			else if (Game_event.key.code == sf::Keyboard::S)
+			{
+				keypressedS = false;
+			}
+			if (Game_event.key.code == sf::Keyboard::D)
+			{
+				keypressedD = false;
+			}
+			else if (Game_event.key.code == sf::Keyboard::Q)
+			{
+				keypressedQ = false;
+			}
+		}
+};
+
+void Player_Control::deplacement()
+{
+	if (keypressedZ)
 	{
-		if (Game_event.key.code == sf::Keyboard::Z)
-		{
-			keypressedZ = true;
-		}
-		else if (Game_event.key.code == sf::Keyboard::S)
-		{
-			keypressedS = true;
-		}
-		if (Game_event.key.code == sf::Keyboard::D)
-		{
-			keypressedD = true;
-		}
-		else if (Game_event.key.code == sf::Keyboard::Q)
-		{
-			keypressedQ = true;
-		}
+		ypos -= 5.f;
+		ptrGame_Player->setPosition(xpos, ypos);
+		//std::cout << "up!" << std::endl;
 	}
-	else if (Game_event.type == sf::Event::KeyReleased)
+	if (keypressedS)
 	{
-		if (Game_event.key.code == sf::Keyboard::Z)
-		{
-			keypressedZ = false;
-		}
-		else if (Game_event.key.code == sf::Keyboard::S)
-		{
-			keypressedS = false;
-		}
-		if (Game_event.key.code == sf::Keyboard::D)
-		{
-			keypressedD = false;
-		}
-		else if (Game_event.key.code == sf::Keyboard::Q)
-		{
-			keypressedQ = false;
-		}
-		}
+		ypos += 5.f;
+		ptrGame_Player->setPosition(xpos, ypos);
+		//std::cout << "down!" << std::endl;
+	}
+	if (keypressedQ)
+	{
+		xpos -= 5.f;
+		ptrGame_Player->setPosition(xpos, ypos);
+		//std::cout << "left!" << std::endl;
+	}
+	if (keypressedD)
+	{
+		xpos += 5.f;
+		ptrGame_Player->setPosition(xpos, ypos);
+		//std::cout << "right!" << std::endl;
+	}
+	//ptrGame_Player->setRotation();
 
-		if (keypressedZ)
-		{
-			ypos -= 0.5f;
-			ptrGame_Player->setPosition(xpos, ypos);
-			std::cout << "up!" << std::endl;
-		}
-		if (keypressedS)
-		{
-			ypos += 0.5f;
-			ptrGame_Player->setPosition(xpos, ypos);
-			std::cout << "down!" << std::endl;
-		}
-		if (keypressedQ)
-		{
-			xpos -= 0.5f;
-			ptrGame_Player->setPosition(xpos, ypos);
-			std::cout << "left!" << std::endl;
-		}
-		if (keypressedD)
-		{
-			xpos += 0.5f;
-			ptrGame_Player->setPosition(xpos, ypos);
-			std::cout << "right!" << std::endl;
-		}
-		};
+}
 
-void Player_Control::fire(sf::Event Game_event)
+void Player_Control::isFire(sf::Event Game_event)
 {
 	if (Game_event.type == sf::Event::MouseButtonPressed)
 	{
-		firing = true;
+		isFiring = true;
 	}
 	else if (Game_event.type == sf::Event::MouseButtonReleased)
 	{
-		firing = false;
+		isFiring = false;
 	}
+}
 
-	if (firing)
+bool Player_Control::Fire()
+{
+	//Pistol pistol* = new Pistol;
+	//weaponType().Getfirerate()
+	if(isFiring)
 	{
-		sf::CircleShape Bullet(10.f);
-		fireRate += 1;
-		if (fireRate >= 30)
+		if (rate >= 1)
 		{
-			std::cout << "fire!" << std::endl;
-			fireRate = 0;
-			Game_Window.draw(Bullet);
+			rate = 0;
+			return true;
 		}
 		else
 		{
-			fireRate = 0;
+			rate += 0.1;
+			return false;
 		}
 	}
+	else
+	{
+		rate = 1000000000;
+		return false;
+	}
+}
+
+
+void Player_Control::selectWeapon()
+{
 }
