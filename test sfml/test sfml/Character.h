@@ -10,11 +10,12 @@ class Character
 		~Character() = default;
 		//Méthodes
 		virtual void Attack() = 0;
-		virtual void Move(int targetPosX, int targetPosY) = 0;
-		virtual void Spawn(int sizeX, int sizeY) = 0;
+		virtual void Move(int posX, int posY) = 0;
+		void Spawn(int sizeX, int sizeY);
 		void Draw(sf::RenderWindow& window);
 		void TakeDamage();
 		int GetHealth() { return m_health; }
+		sf::CircleShape GetShape() { return m_shape; }
 
 	protected:
 		float m_radius = 50;

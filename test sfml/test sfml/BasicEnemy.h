@@ -10,5 +10,5 @@ public:
 	~BasicEnemy() = default;
 	void Attack() override;
 	void Move(int targetPosX, int targetPosY) override;
-	void Spawn(int sizeX, int sizeY) override;
+	void Spawn(int sizeX, int sizeY);
 };

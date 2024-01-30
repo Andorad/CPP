@@ -83,4 +83,6 @@ void BasicEnemy::Spawn(int sizeX, int sizeY)
     default:
         m_shape.setPosition(sf::Vector2f(0, 0));
     }
+
+    m_shape.setOrigin(m_radius, m_radius);
 }

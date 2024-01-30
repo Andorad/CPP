@@ -1,6 +1,8 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include "Pistol.h"
+#include "UI.h"
+#include "Player.h"
 
 class Player_Control
 {
@@ -14,11 +16,11 @@ private:
 	bool keypressedQ = false;
 	bool keypressedS = false;
 	bool isFiring = false;
-	sf::CircleShape * ptrGame_Player;
+	Player* ptrGame_Player;
 	sf::RenderWindow* ptrWindow;
 	Pistol weaponType();
 public:
-	Player_Control(sf::CircleShape *Player, sf::RenderWindow* Window);
+	Player_Control(Player* player);
 	~Player_Control();
 	void isDeplacement(sf::Event Game_event);
 	void deplacement();
