@@ -1,5 +1,10 @@
 #include <SFML/Graphics.hpp>
 #include "UI.h"
+#include "BasicEnemy.h"
+#include "WaveManager.h"
+#include <iostream>
+#include <cstdlib>
+
 
 int score = 0;
 int maxAmmoInLoader = 10;
@@ -40,8 +45,23 @@ int main()
 
     ui.ModifyScoreValue(score);
 
+    std::vector<Character*> enemyList;
+    WaveManager waveManager;
+    int targetX = 100;
+    int targetY = 100;// A remplacer par la position du joueur
+    int enemiesToSpawn = 1;
+
+    srand(time(nullptr));
+
     while (window.isOpen())
     {
+        //Si tous les ennemis sont morts on lance la nouvelle vague
+        if(enemyList.size() == 0)
+        {
+            waveManager.InstantiateWaves(enemyList, window.getSize().x, window.getSize().y, enemiesToSpawn);
+            enemiesToSpawn *= 2;
+        }
+
         sf::Event event;
         while (window.pollEvent(event))
         {
@@ -49,17 +69,32 @@ int main()
             {
                 window.close();
             }
-
-            if (event.type == sf::Event::MouseButtonPressed)
+            else if(event.type == sf::Event::KeyPressed)
             {
-                if (event.key.code == sf::Mouse::Left)
+                if(event.key.code == sf::Keyboard::A)
                 {
-                    Shoot(ui);
+                    if(!enemyList.empty())
+                    {
+                        enemyList[0]->TakeDamage();
+                        if (enemyList[0]->GetHealth() <= 0)
+                        {
+                            delete(enemyList[0]);
+                            enemyList[0] = nullptr;
+                            enemyList.erase(enemyList.begin());
+                        }
+                    }
                 }
-            }
-             if(event.type == sf::Event::KeyPressed)
-             {
-                 if (event.key.code == sf::Keyboard::R)
+                else if(event.key.code == sf::Keyboard::Z)
+                {
+                    enemyList.push_back(new BasicEnemy);
+                    enemyList[enemyList.size() - 1]->Spawn(window.getSize().x, window.getSize().y);
+                }
+                else if (event.key.code == sf::Keyboard::E)
+                {
+                    targetX = rand() % window.getSize().x;
+                    targetY = rand() % window.getSize().y;
+                }
+                else if (event.key.code == sf::Keyboard::R)
                  {
                      Reload(ui);
                  }
@@ -67,11 +102,28 @@ int main()
                  {
                      AddScore(ui);
                  }
-             }
+            }
+            
+            if (event.type == sf::Event::MouseButtonPressed)
+            {
+                if (event.key.code == sf::Mouse::Left)
+                {
+                    Shoot(ui);
+                }
+            }
         }
 
         window.clear();
         ui.UpdateUI(window);
+        //Si on a des ennemis dans la sc�ne, on les d�place et on les redessine � leur nouvelle position
+        if(!enemyList.empty())
+        {
+            for (size_t i = 0; i < enemyList.size(); i++)
+            {
+                enemyList[i]->Move(targetX, targetY);
+                enemyList[i]->Draw(window);
+            }
+        }
         window.display();
     }
 

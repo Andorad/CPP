@@ -141,6 +141,15 @@
   <ItemGroup>
     <ClInclude Include="Player_Control.h" />
     <ClInclude Include="UI.h" />
+    <ClCompile Include="BasicEnemy.cpp" />
+    <ClCompile Include="Character.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="WavesManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BasicEnemy.h" />
+    <ClInclude Include="Character.h" />
+    <ClInclude Include="WaveManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
