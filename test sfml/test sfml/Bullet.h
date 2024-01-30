@@ -6,17 +6,20 @@ class Bullet
 private:
 	double bullet_direction;
 	bool isHit;
-	sf::Vector2f bullet_position;
-	sf::CircleShape BulletObject;
+	float speed = 10.f;
+	sf::CircleShape bulletShape;
 public:
-	Bullet(float radius,float xpos, float ypos);
+	Bullet(float xpos, float ypos);
 	~Bullet();
-	sf::CircleShape getBulletObject() { return BulletObject; }
-	double GetBulletDirection() { return bullet_direction; }
-	sf::Vector2f  GetBulletPosition() { return bullet_position; }
+	sf::CircleShape getBulletObject() { return bulletShape; }
+	void BulletMove();
 
-	void SetBulletDirection(double bullet_direction);
-	void SetBulletPosition(float posx, float posy);
-	void Bullet_fired();
+
+	//double GetBulletDirectionX() { return bullet_direction_x; }
+	//double GetBulletDirectionY() { return bullet_direction_y; }
+	sf::Vector2f  GetBulletPosition() { return bulletShape.getPosition(); }
+
+	void SetBulletDirection(double bullet_dir);
+	void SetBulletPosition(sf::Vector2f pos);
 
 };

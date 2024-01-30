@@ -7,6 +7,8 @@
 Player_Control::Player_Control(sf::CircleShape *Player, sf::RenderWindow *Window)
 {
 	ptrGame_Player = Player;
+	xpos = ptrGame_Player->getPosition().x;
+	ypos = ptrGame_Player->getPosition().y;
 	ptrWindow = Window;
 };
 
@@ -51,34 +53,32 @@ void Player_Control::isDeplacement(sf::Event Game_event)
 			{
 				keypressedQ = false;
 			}
-		
 		}
-
 };
 
 void Player_Control::deplacement()
 {
 	if (keypressedZ)
 	{
-		ypos -= 1.5f;
+		ypos -= 5.f;
 		ptrGame_Player->setPosition(xpos, ypos);
 		//std::cout << "up!" << std::endl;
 	}
 	if (keypressedS)
 	{
-		ypos += 1.5f;
+		ypos += 5.f;
 		ptrGame_Player->setPosition(xpos, ypos);
 		//std::cout << "down!" << std::endl;
 	}
 	if (keypressedQ)
 	{
-		xpos -= 1.5f;
+		xpos -= 5.f;
 		ptrGame_Player->setPosition(xpos, ypos);
 		//std::cout << "left!" << std::endl;
 	}
 	if (keypressedD)
 	{
-		xpos += 1.5f;
+		xpos += 5.f;
 		ptrGame_Player->setPosition(xpos, ypos);
 		//std::cout << "right!" << std::endl;
 	}
@@ -104,7 +104,7 @@ bool Player_Control::Fire()
 	//weaponType().Getfirerate()
 	if(isFiring)
 	{
-		if (rate >= 6)
+		if (rate >= 1)
 		{
 			rate = 0;
 			return true;
