@@ -131,12 +131,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Player_Control.cpp" />
+    <ClCompile Include="Projet_C++_2D.cpp" />
     <ClCompile Include="UI.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="charbb_reg.ttf" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Player_Control.h" />
     <ClInclude Include="UI.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
